@@ -90,10 +90,11 @@
 
   
   # fonts
-  fonts.fonts = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji];
+  fonts.packages = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji];
 
   # flatpak fonts
   fonts.fontDir.enable = true;
+  
   # Change shell
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
