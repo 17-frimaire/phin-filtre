@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
 
@@ -77,6 +74,9 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+  
+  # swaylock config
+  security.pam.services.swaylock = {};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cassis = {
@@ -88,9 +88,11 @@
     ];
   };
 
+  # hyprland
+  programs.hyprland.enable = true;
   
   # fonts
-  fonts.packages = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji];
+  fonts.packages = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji fira-code fira-code-symbols font-awesome liberation_ttf nerdfonts proggyfonts];
 
   # flatpak fonts
   fonts.fontDir.enable = true;
@@ -118,6 +120,10 @@
   emacs
   zsh
   btop
+  kitty
+  waybar
+  wofi
+  swaylock
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
