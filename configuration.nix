@@ -18,6 +18,9 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  # Realtek drivers
+  boot.extraModulePackages = with config.boot.kernelPackages; [rtl88x2bu ];
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -125,6 +128,7 @@
   wofi
   swaylock
   nwg-look
+  linuxPackages.rtl88x2bu
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
