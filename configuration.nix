@@ -18,9 +18,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Realtek drivers
-  # boot.extraModulePackages = with config.boot.kernelPackages; [rtl88x2bu ];
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -50,9 +47,9 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us,ru,fr";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -128,7 +125,13 @@
   wofi
   swaylock
   nwg-look
-   ];
+  grim
+  slurp
+  kakoune
+  unzip
+  firefox-devedition-bin
+  vscode
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
