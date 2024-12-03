@@ -56,7 +56,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -92,7 +92,7 @@
   programs.hyprland.enable = true;
   
   # fonts
-  fonts.packages = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji fira-code fira-code-symbols font-awesome liberation_ttf nerdfonts proggyfonts];
+  fonts.packages = with pkgs; [noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif noto-fonts-emoji fira-code fira-code-symbols font-awesome liberation_ttf proggyfonts];
 
   # flatpak fonts
   fonts.fontDir.enable = true;
@@ -102,7 +102,7 @@
   programs.zsh.enable = true;
   
   # Install firefox.
-  programs.firefox.enable = true;
+  #  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -131,6 +131,8 @@
   unzip
   firefox-devedition-bin
   vscode
+  pkgs.gnome-tweaks
+  evolution
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
